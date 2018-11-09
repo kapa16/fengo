@@ -1,0 +1,31 @@
+{
+  "name": "brand",
+  "version": "1.0.0",
+  "description": "brand",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavel",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-core": "latest",
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cache": "latest",
+    "gulp-csso": "latest",
+    "gulp-html-beautify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "latest",
+    "gulp-pug": "latest",
+    "gulp-rigger": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest"
+  },
+  "dependencies": {
+    "lodash": "latest",
+    "minimatch": "latest"
+  }
+}

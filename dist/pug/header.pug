@@ -1,0 +1,29 @@
+header.header
+    nav(class=["top-bar"])
+        div(class="container container_flex-between")
+            ul(class="menu menu_inline top-bar__menu")
+                - var listMenuLeft = ["My Account", "MY Wishlist (0)", "Checkout", "Log In   or   Register"]
+                - for (let i=0; i<listMenuLeft.length; i++)
+                    li(class="menu__list menu-list_mr")
+                        a(class="link top-bar__link menu__link_upper" href="#")=listMenuLeft[i]
+
+            ul(class="menu menu_inline top-bar__menu")
+                - var listMenuRight = ["US Dollar", "English", "My Bag: 0 item(s)"]
+                - for (let i=0; i<listMenuRight.length; i++)
+                    li(class="menu__list menu-list_ml")
+                        a(class="link top-bar__link menu__link_upper" href="#")=listMenuRight[i]
+
+    form(class="container container_flex-end" action="#")
+        input(class="search" type="text" placeholder="Find it here...")
+
+    nav(class="main-menu")
+        div(class="container container_flex-between main-menu__container")
+            a(class="logo" href="#")="FENGO"
+            ul(class="menu menu_inline main-menu__menu")
+                - var listMainMenu = ["Fashion", "Electronics", "Gifts", "Books", "At Home", "Music", "Sale"]
+                - for (let i=0; i<listMainMenu.length; i++)
+                    li(class="menu__list main-menu__list_ml")
+                        a(class="link main-menu__link menu__link_upper" href="#")=listMainMenu[i]
+
+    .slider
+        

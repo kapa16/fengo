@@ -15,7 +15,7 @@ var autoprefixerList = [
 var path = {
     build: {
         html: 'app/',
-        pug: 'app/',
+        pug: 'dist/src/',
         htmlbeautify: 'app/',
         js: 'app/js/',
         css: 'app/css/',
@@ -100,6 +100,7 @@ gulp.task('pug:build', function () {
         .pipe(gulp.dest(path.build.pug))
         .pipe(webserver.reload({stream: true}));
     gulp.run('htmlbeautify');
+    gulp.run('html:build');
 });
 
 // сбор стилей

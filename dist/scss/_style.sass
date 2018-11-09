@@ -1,0 +1,70 @@
+html
+  font-family: MerriweatherSans, Arial, sans-serif
+  font-size: 10px
+
+.container
+  max-width: 1170px
+  margin: 0 auto
+  &_flex-between
+    display: flex
+    justify-content: space-between
+    flex: 1 1 0
+  &_flex-end
+    display: flex
+    justify-content: flex-end
+.menu
+  list-style-type: none
+  &_inline
+    display: flex
+  &__link_upper
+    text-transform: uppercase
+  &-list_mr
+    margin-right: 40px
+  &-list_ml
+    margin-left: 40px
+
+.link
+  display: block
+
+.top-bar
+  display: flex
+  background-color: $colorWildSand
+  margin-bottom: 16px
+  &__link
+    color: $colorGray
+    font-size: 1.1rem
+    font-weight: 400
+    padding: 9px
+  &__link:hover
+    color: $colorTundoraMoreDark
+
+.search
+  border: 1px solid $colorMercury
+  background-color: $colorWhite
+  font-family: "Trebuchet MS"
+  color: $colorLightGray
+  font-size: 1.3rem
+  font-weight: 400
+  padding: 11px
+  &::placeholder
+    color: $colorLightGray
+
+.logo
+  background: url("../img/logo.png") no-repeat
+  color: $colorTundoraDark
+  font-size: 4.4rem
+  line-height: 3.4rem
+  font-weight: 700
+  text-transform: uppercase
+  padding-left: 60px
+
+.main-menu
+  &__container
+    align-items: flex-end
+  &__link
+    font-family: Cousine
+    color: $colorScorpion
+    font-size: 1.4rem
+    font-weight: 700
+  &__list_ml
+    margin-left: 50px

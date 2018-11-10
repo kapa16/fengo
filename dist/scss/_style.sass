@@ -4,14 +4,17 @@ html
 
 .container
   max-width: 1170px
+  width: 100%
   margin: 0 auto
-  &_flex-between
+  padding: 0 20px
+  &_flex
     display: flex
-    justify-content: space-between
-    flex: 1 1 0
-  &_flex-end
-    display: flex
-    justify-content: flex-end
+    &_between
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+
+
 .menu
   list-style-type: none
   &_inline
@@ -19,9 +22,9 @@ html
   &__link_upper
     text-transform: uppercase
   &-list_mr
-    margin-right: 40px
+    margin-right: 4rem
   &-list_ml
-    margin-left: 40px
+    margin-left: 4rem
 
 .link
   display: block
@@ -34,7 +37,7 @@ html
     color: $colorGray
     font-size: 1.1rem
     font-weight: 400
-    padding: 9px
+    padding: 9px 0
   &__link:hover
     color: $colorTundoraMoreDark
 
@@ -68,3 +71,41 @@ html
     font-weight: 700
   &__list_ml
     margin-left: 50px
+
+.slider
+  max-width: 1920px
+  height: 1070px
+  background-color: $colorSilver
+  margin-top: 19px
+  &__container
+    height: 100%
+    display: flex
+    align-items: center
+  &__left,
+  &__right
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+.content-first
+  text-transform: uppercase
+  &__string-one
+    font-family: Cousine
+    color: $colorEmperor
+    font-size: 30px
+    font-weight: 700
+    line-height: 45px
+  &__string-two
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.05)
+    color: $colorWhite
+    font-size: 100px
+    font-weight: 900
+    line-height: 80px
+
+
+@media screen and (max-width: 940px)
+  .container
+
+
+

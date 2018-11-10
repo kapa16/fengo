@@ -1,6 +1,6 @@
 header.header
     nav(class=["top-bar"])
-        div(class="container container_flex-between")
+        div(class="container container_flex_between")
             ul(class="menu menu_inline top-bar__menu")
                 - var listMenuLeft = ["My Account", "MY Wishlist (0)", "Checkout", "Log In   or   Register"]
                 - for (let i=0; i<listMenuLeft.length; i++)
@@ -13,12 +13,13 @@ header.header
                     li(class="menu__list menu-list_ml")
                         a(class="link top-bar__link menu__link_upper" href="#")=listMenuRight[i]
 
-    form(class="container container_flex-end" action="#")
-        input(class="search" type="text" placeholder="Find it here...")
-
     nav(class="main-menu")
-        div(class="container container_flex-between main-menu__container")
+        div(class="container container_flex_between main-menu__container")
             a(class="logo" href="#")="FENGO"
+
+            form(class="form-search" action="#")
+                input(class="search" type="text" placeholder="Find it here...")
+
             ul(class="menu menu_inline main-menu__menu")
                 - var listMainMenu = ["Fashion", "Electronics", "Gifts", "Books", "At Home", "Music", "Sale"]
                 - for (let i=0; i<listMainMenu.length; i++)
@@ -26,4 +27,16 @@ header.header
                         a(class="link main-menu__link menu__link_upper" href="#")=listMainMenu[i]
 
     .slider
+        .slider__next
+        .slider__prev
+        .slider__control
+        .container.slider__container
+            .slider__left
+            .slider__right
+                .content-first.slider__content-first
+                    div(class="content-first__string-one")="Check your"
+                    div(class="content-first__string-two")="autumn style"
+                    div(class="content-first__string-three")="All the trends you need this season"
+                    a(class="button-now" href="#")="read it now"
+
         

@@ -7,12 +7,12 @@ html
   width: 100%
   margin: 0 auto
   padding: 0 20px
-  &_flex
-    display: flex
-    &_between
-      display: flex
-      justify-content: space-between
 
+.link
+  display: block
+
+.show_small
+  display: none
 
 .menu
   list-style-type: none
@@ -25,13 +25,13 @@ html
   &-list_ml:not(:first-of-type)
     margin-left: 4rem
 
-.link
-  display: block
-
 .top-bar
-  display: flex
   background-color: $colorWildSand
   margin-bottom: 16px
+  &__container
+    display: flex
+    display: flex
+    justify-content: space-between
   &__link
     color: $colorGray
     font-size: 1.1rem
@@ -123,6 +123,8 @@ html
       margin-left: 40px
 
 @media screen and (max-width: 980px)
+  .hide_middle
+    display: none
   .menu
     &-list_mr:not(:last-of-type)
       margin-right: 3rem
@@ -140,9 +142,29 @@ html
 
 
 @media screen and (max-width: 768px)
+  .hide_small
+    display: none
+  .show_small
+    display: block
+  .top-bar
+    background-color: $colorWhite
+    &__container
+      flex-direction: column
+    &__menu
+      justify-content: center
+      &_left
+        background-color: $colorWildSand
+        margin: 0 -20px
+        padding: 0 20px
+      &_right
+
   .main-menu
-
-
-@media screen and (max-width: 768px)
-  .main-menu
-
+    &__container
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+    &__logo
+      order: -1
+    &__menu
+      order: 1
+      margin: 0

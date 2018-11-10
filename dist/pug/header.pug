@@ -15,7 +15,9 @@ header.header
 
     nav(class="main-menu")
         div(class="container container_flex_end main-menu__container")
-            a(class="logo" href="#")="FENGO"
+
+            form(class="form-search" action="#")
+                input(class="search" type="text" placeholder="Find it here...")
 
             ul(class="menu menu_inline main-menu__menu")
                 - var listMainMenu = ["Fashion", "Electronics", "Gifts", "Books", "At Home", "Music", "Sale"]
@@ -23,8 +25,8 @@ header.header
                     li(class="menu__list main-menu__list_ml")
                         a(class="link main-menu__link menu__link_upper" href="#")=listMainMenu[i]
 
-            form(class="form-search" action="#")
-                input(class="search" type="text" placeholder="Find it here...")
+            a(class="logo main-menu__logo" href="#")="FENGO"
+
     .slider
         .slider__next
         .slider__prev

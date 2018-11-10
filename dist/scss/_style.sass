@@ -12,10 +12,6 @@ html
     &_between
       display: flex
       justify-content: space-between
-    &_end
-      display: flex
-      //justify-content: flex-end
-      flex-wrap: wrap-reverse
 
 
 .menu
@@ -24,9 +20,9 @@ html
     display: flex
   &__link_upper
     text-transform: uppercase
-  &-list_mr
+  &-list_mr:not(:last-of-type)
     margin-right: 4rem
-  &-list_ml
+  &-list_ml:not(:first-of-type)
     margin-left: 4rem
 
 .link
@@ -43,6 +39,9 @@ html
     padding: 9px 0
   &__link:hover
     color: $colorTundoraMoreDark
+
+.form-search
+  order: 1
 
 .search
   border: 1px solid $colorMercury
@@ -65,14 +64,23 @@ html
   padding-left: 60px
 
 .main-menu
+  &__menu
+    width: 75%
+    justify-content: flex-end
   &__container
-    align-items: flex-end
+    display: flex
+    justify-content: space-between
+    flex-direction: row-reverse
+    flex-wrap: wrap-reverse
+    justify-content: space-between
+    align-items: flex-start
   &__link
     font-family: Cousine
     color: $colorScorpion
     font-size: 1.4rem
     font-weight: 700
-  &__list_ml
+    word-wrap: normal
+  &__list_ml:not(:first-of-type)
     margin-left: 50px
 
 .slider
@@ -107,8 +115,34 @@ html
     line-height: 80px
 
 
-@media screen and (max-width: 940px)
-  .container
+@media screen and (max-width: 1200px)
+  .main-menu
+    &__menu
+      width: 67%
+    &__list_ml:not(:first-of-type)
+      margin-left: 40px
+
+@media screen and (max-width: 980px)
+  .menu
+    &-list_mr:not(:last-of-type)
+      margin-right: 3rem
+    &-list_ml:not(:first-of-type)
+      margin-left: 3rem
+  .main-menu
+    &__menu
+      width: 100%
+      justify-content: space-between
+      margin-top: 34px
+    &__list_ml:not(:first-of-type)
+      margin-left: 0
+    &__logo
+      order: 1
 
 
+@media screen and (max-width: 768px)
+  .main-menu
+
+
+@media screen and (max-width: 768px)
+  .main-menu
 

@@ -210,6 +210,129 @@ html
   height: 14px
   margin-left: 9px
 
+.slider
+  display: flex
+  align-items: center
+  height: 178px
+  width: 100%
+  background-color: $colorSilver
+  text-transform: uppercase
+  margin-top: 19px
+  padding: 10px
+  &__now
+    color: #333333
+    font-size: 14px
+    font-weight: 700
+    padding-right: 10px
+    &:after
+      font-family: "Font Awesome 5 Free"
+      font-weight: 900
+      content: "\f105"
+    &:hover
+      color: $colorRed
+  &__left,
+  &__right
+    width: 100%
+
+.slider1
+  display: flex
+  display: none
+  flex: 1 1 0
+  &__first-string
+    font-family: Cousine
+    color: $colorEmperor
+    font-size: 12px
+    font-weight: 700
+    margin-bottom: 7px
+  &__second-string
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.05)
+    color: $colorWhite
+    font-size: 34px
+    font-weight: 900
+    line-height: 27px
+    margin-bottom: 5px
+  &__third-string
+    font-family: "Roboto Condensed"
+    color: $colorTundora
+    font-size: 13px
+    font-weight: 700
+    line-height: 12px
+    margin-bottom: 9px
+
+.slider2
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 300px
+    height: 140px
+  &__first-string
+    width: 100%
+    display: flex
+    justify-content: center
+    color: $colorWhite
+    font-size: 34px
+    font-weight: 900
+  &__second-string
+    font-family: "Roboto Condensed"
+    color: $colorWhite
+    font-size: 18px
+    font-weight: 700
+  &__now
+    color: $colorWhite
+    font-size: 14px
+    font-weight: 700
+
+.underline
+  display: block
+  width: 16px
+  border-bottom: 3px solid $colorWhite
+
+.slider3
+  display: flex
+  display: none
+  flex-flow: column
+  margin-left: 20px
+  &__first-string
+    font-family: "Roboto Condensed"
+    color: $colorBoulder
+    font-size: 15px
+    font-weight: 700
+    line-height: 10px
+    margin-bottom: 6px
+  &__second-string
+    color: #373737
+    font-size: 62px
+    font-weight: 900
+    line-height: 48px
+    margin-bottom: 6px
+  &__third-string
+    font-family: "Roboto Condensed"
+    color: $colorOpal
+    font-size: 21px
+    font-weight: 700
+    line-height: 14px
+    margin-bottom: 6px
+    padding: 3px
+    border-top: 2px solid $colorOpal
+    border-bottom: 2px solid $colorOpal
+  &__fourth-string
+    font-family: "Arial Black"
+    color: #373737
+    font-size: 15px
+    font-weight: 900
+    line-height: 14px
+    margin-bottom: 6px
+  &__fifth-string
+    color: $colorBoulder
+    font-size: 8px
+    font-weight: 900
 
 
 
@@ -283,3 +406,27 @@ html
       min-width: auto
       border: none
       margin-bottom: 0
+
+@media screen and (min-width: 980px)
+  .show_large
+    display: flex
+
+  .link_margin-none
+    margin: 0
+
+  .header__container
+    flex-flow: row-reverse wrap-reverse
+
+  .main-menu
+    order: -1
+    width: auto
+    &__responsive-menu
+      width: auto
+    &__link
+      margin-left: 40px
+
+  .search
+    margin: 16px 0 0 0
+
+  .logo
+    margin-bottom: 19px

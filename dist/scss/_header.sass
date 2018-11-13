@@ -196,6 +196,7 @@ html
     //background-color: #d2d1d0
   &__menu
     display: none
+    z-index: 1
     position: absolute
     top: 40px
     flex-direction: column
@@ -285,6 +286,9 @@ html
       min-width: auto
       border: none
       margin-bottom: 0
+    &__link:hover
+      color: $colorRed
+      background: none
 
 @media screen and (min-width: 980px)
   .show_large

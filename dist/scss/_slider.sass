@@ -1,6 +1,7 @@
 //===================== SLIDER ======================= SLIDER
 
 .slider
+  position: relative
   height: 178px
   width: 100%
   background-color: $colorSilver
@@ -12,19 +13,15 @@
     height: 100%
     position: relative
     padding: 10px
-  &__now
+  &__button-now
     color: #333333
-    font-size: 14px
-    font-weight: 700
-    &:after
-      font-family: "Font Awesome 5 Free"
-      font-weight: 900
-      content: "\f105"
-    &:hover
-      color: $colorRed
   &__left,
   &__right
     width: 100%
+  &__indicators
+    display: none
+    display: block
+
 
 .slider1
   display: none
@@ -69,6 +66,7 @@
     justify-content: center
     font-size: 34px
     font-weight: 900
+    line-height: 25px
     margin: 0 auto 13px
   &__second-string
     font-family: "Roboto Condensed"
@@ -84,10 +82,14 @@
   &__now
     color: $colorWhite
 
-.underline
-  display: block
-  width: 16px
-  border-bottom: 3px solid $colorWhite
+  &__underline
+    display: block
+    width: 16px
+    border-bottom: 3px solid $colorWhite
+    &_left
+      margin-right: 3px
+    &_right
+      margin-left: 3px
 
 .slider3
   display: none
@@ -128,45 +130,87 @@
     font-size: 8px
     font-weight: 900
 
-.control-prev,
-.control-next
-  width: 90px
-  height: 100%
-  display: none
-  position: absolute
-  top: 0px
+.slider
+  &:hover &__control
+    display: block
 
-.control-prev
-  left: 0px
+  &__control
+    width: 90px
+    height: 100%
+    display: none
+    position: absolute
+    top: 0px
+    &:hover
+      .control__icon
+        &:before
+          color: $colorSilver
+        &_prev
+          background-color: $colorWhite
+        &_next
+          background-color: $colorWhite
 
-.control-next
-  left: 100%
-  margin-left: -90px
+.control
+  &-prev
+    left: 0px
+  &-next
+    left: 100%
+    margin-left: -90px
 
-.icon_prev,
-.icon_next
-  position: absolute
-  top: 50%
-  margin-top: -24px
-  left: 50%
-  margin-left: -24px
-  width: 48px
-  height: 48px
-  border: 3px solid $colorWhite
-  border-radius: 50%
+  &__icon
+    position: absolute
+    top: 50%
+    margin-top: -24px
+    left: 50%
+    margin-left: -24px
+    width: 48px
+    height: 48px
+    border: 3px solid $colorWhite
+    border-radius: 50%
+    &:before
+      font-family: "Font Awesome 5 Free"
+      font-weight: 700
+      color: $colorWhite
+      font-size: 28px
+      line-height: 48px
+      position: absolute
 
-.icon_prev
-  background: url("../img/angle-left-big.svg") no-repeat 45% 50%
+    &_prev:before
+      content: "\f104"
+      left: 32%
 
-.icon_next
-  background: url("../img/angle-right-big.svg") no-repeat 55% 50%
+    &_next:before
+      content: "\f105"
+      left: 40%
+
+//.icon_prev
+//  background: url("../img/angle-left-big.svg") no-repeat 45% 50%
+//.icon_next
+//  background: url("../img/angle-right-big.svg") no-repeat 55% 50%
+
+
+
+.slider
+  &__indicators
+    display: none
+    position: absolute
+    top: 100%
+    margin-top: -32px
+    left: 50%
+    margin-left: -29px
+  &__indicator
+    display: block
+    width: 10px
+    height: 10px
+    border: 2px solid $colorWhite
+    border-radius: 50%
+    margin: 0 7px
+  &__indicator:hover
+    background-color: $colorWhite
 
 //===================== MEDIA ============================== MEDIA
 @media screen and (min-width: 768px)
   .slider
     height: 428px
-    &__container
-      padding: 0 90px
 
   .slider1
     &__first-string
@@ -187,6 +231,7 @@
     &__first-string
       font-size: 65px
       margin-bottom: 26px
+      line-height: 50px
     &__second-string
       font-size: 35px
       margin-bottom: 24px
@@ -194,14 +239,17 @@
       display: block
       width: 510px
       margin-bottom: 18px
+    &__underline
+      width: 30px
+      border-bottom: 4px solid $colorWhite
+      &_left
+        margin-right: 3px
+      &_right
+        margin-left: 3px
 
-  .underline
-    display: block
-    width: 30px
-    border-bottom: 4px solid $colorWhite
 
   .slider3
-    margin-left: 20px
+    margin-left: 90px
     &__first-string
       font-size: 28px
       line-height: 20px
@@ -232,59 +280,116 @@
 @media screen and (min-width: 980px)
   .slider
     height: 546px
-    &__now
-      font-size: 14px
+    &__indicators
+      display: flex
+
   .slider1
     &__first-string
-      font-size: 22px
-      margin-bottom: 16px
+      font-size: 25px
+      line-height: 17px
+      margin-bottom: 17px
     &__second-string
-      font-size: 75px
-      line-height: 60px
-      margin-bottom: 14px
+      font-size: 85px
+      line-height: 68px
+      margin-bottom: 15px
     &__third-string
-      font-size: 26px
-      line-height: 24px
-      margin-bottom: 20px
+      font-size: 30px
+      line-height: 27px
 
   .slider2
+    &__content
+      padding: 65px 57px
     &__first-string
-      font-size: 34px
-      margin: 0 auto 13px
+      font-size: 73px
+      line-height: 57px
+      margin: 0 auto 24px
     &__second-string
-      font-size: 18px
-      margin-bottom: 18px
-
-  .underline
-    display: block
-    width: 16px
-    border-bottom: 3px solid $colorWhite
+      font-size: 37px
+      margin-bottom: 29px
+    &__third-string
+      width: 660px
+      margin-bottom: 23px
+      font-size: 13px
+    &__underline
+      width: 60px
+      &_left
+        margin-right: -9px
+      &_right
+        margin-left: 8px
 
   .slider3
-    margin-left: 20px
+    margin-left: 100px
     &__first-string
-      font-size: 15px
-      line-height: 10px
-      margin-bottom: 6px
+      font-size: 36px
+      line-height: 25px
+      margin-bottom: 16px
     &__second-string
-      font-size: 62px
-      line-height: 48px
-      margin-bottom: 6px
+      font-size: 152px
+      line-height: 120px
+      margin-bottom: 17px
     &__third-string
-      font-size: 21px
-      line-height: 14px
-      margin-bottom: 6px
-      padding: 3px
-      border-top: 2px solid $colorOpal
-      border-bottom: 2px solid $colorOpal
+      font-size: 50px
+      line-height: 40px
+      margin-bottom: 18px
+      padding: 6px
+      border-top: 3px solid $colorOpal
+      border-bottom: 3px solid $colorOpal
     &__fourth-string
-      font-size: 15px
-      line-height: 14px
-      margin-bottom: 6px
+      font-size: 36px
+      line-height: 26px
+      margin-bottom: 14px
     &__fifth-string
-      font-size: 8px
-      font-weight: 900
+      font-size: 20px
 
 @media screen and (min-width: 1210px)
   .slider
     height: 1070px
+
+  .slider1
+    &__first-string
+      font-size: 30px
+      line-height: 22px
+      margin-bottom: 19px
+    &__second-string
+      font-size: 100px
+      line-height: 81px
+      margin-bottom: 18px
+    &__third-string
+      font-size: 35px
+      line-height: 34px
+
+  .slider2
+    &__content
+      padding: 100px 110px 90px
+    &__first-string
+      font-size: 84px
+      line-height: 59px
+      margin: 0 auto 28px
+    &__second-string
+      font-size: 43px
+      margin-bottom: 34px
+
+  .slider3
+    margin-left: 35px
+    &__first-string
+      font-size: 36px
+      line-height: 25px
+      margin-bottom: 23px
+    &__second-string
+      font-size: 209px
+      line-height: 170px
+      margin-bottom: 24px
+    &__third-string
+      font-size: 69px
+      line-height: 55px
+      margin-bottom: 24px
+      padding: 14px 0 9px
+      border-top: 4px solid $colorOpal
+      border-bottom: 4px solid $colorOpal
+    &__fourth-string
+      font-size: 50px
+      line-height: 42px
+      margin-bottom: 19px
+    &__fifth-string
+      font-size: 28px
+        margin-bottom: 27px

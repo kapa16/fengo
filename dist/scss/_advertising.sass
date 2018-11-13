@@ -1,0 +1,210 @@
+.advertising
+  &__container
+
+  background-color: $colorConcrete
+  padding: 20px 0
+  &__block
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    box-sizing: border-box
+    background-color: $colorSilver
+    margin-bottom: 10px
+    text-transform: uppercase
+
+.exclusive
+  height: 156px
+  padding: 10px
+  &__content
+    min-width: 260px
+    width: 100%
+    height: 112px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    color: $colorWhite
+    border: 1px solid rgba(255, 255, 255, 0.3)
+    margin-bottom: 11px
+    padding: 0 13px
+  &__header
+    width: 100% //53px
+    display: flex
+    font-family: Cousine
+    color: $colorWhite
+    font-size: 21px
+    font-weight: 700
+    line-height: 11px
+    padding-bottom: 8px
+  &__underline
+    display: block
+    width: 100% //53px
+    border-bottom: 1px solid $colorWhite
+    &_left
+      margin-right: 8px
+    &_right
+      margin-left: 8px
+  &__info
+    font-family: "Roboto Condensed"
+    color: $colorWhite
+    font-size: 15px
+    font-weight: 400
+  &__button-now
+    color: $colorWhite
+    font-size: 14px
+    font-weight: 700
+
+.hottest
+  height: 537px
+
+.jewelry
+  height: 189px
+
+.accessories
+  height: 189px
+
+.lookbook
+  height: 401px
+
+.video
+  height: 189px
+
+
+
+
+
+
+//===================== MEDIA ============================== MEDIA
+@media screen and (min-width: 768px)
+  .advertising
+    height: 674px
+    padding: 30px 0
+    &__block
+      width: auto
+    &__container
+      padding: 0
+      height: 100%
+      width: 724px
+      display: flex
+      flex-flow: column wrap
+      justify-content: space-between
+      align-content: space-between
+      flex: 1 1 0
+
+    &__wrap
+      min-width: 476px
+      height: 328px
+      order: -1
+      display: flex
+      flex-flow: column wrap
+      justify-content: space-between
+      align-content: space-between
+      margin-right: 20px
+
+
+  .exclusive,
+  .hottest,
+  .jewelry
+    margin-bottom: 20px
+
+  .accessories,
+  .lookbook,
+  .video
+    margin-bottom: 0px
+
+  .jewelry,
+  .accessories,
+  .lookbook,
+  .hottest,
+  .video
+    min-width: 228px
+
+  .exclusive
+    order: -1
+    min-width: 476px
+    height: 266px
+    margin-right: 20px
+
+  .hottest
+    height: 432px
+
+  .jewelry
+    height: 154px
+
+  .accessories
+    height: 154px
+
+  .lookbook
+    height: 328px
+
+  .video
+    height: 162px
+
+
+
+@media screen and (min-width: 980px)
+  .advertising
+    height: 852px
+    &__container
+      width: 940px
+
+    &__wrap
+      min-width: 620px
+      height: 426px
+
+  .jewelry,
+  .accessories,
+  .lookbook,
+  .hottest,
+  .video
+    min-width: 300px
+
+  .exclusive
+    min-width: 620px
+    height: 346px
+
+  .hottest
+    height: 569px
+
+  .jewelry,
+  .accessories,
+  .video
+    height: 203px
+
+  .lookbook
+    height: 426px
+
+@media screen and (min-width: 1210px)
+  .advertising
+    height: 1110px
+    padding: 60px 0
+    &__container
+      width: 1170px
+
+    &__wrap
+      min-width: 770px
+      height: 530px
+
+  .jewelry,
+  .accessories,
+  .lookbook,
+  .hottest,
+  .video
+    min-width: 370px
+
+  .exclusive
+    min-width: 770px
+    height: 430px
+
+  .hottest
+    height: 710px
+
+  .jewelry,
+  .accessories,
+  .video
+    height: 250px
+
+  .lookbook
+    height: 530px

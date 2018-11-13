@@ -1,7 +1,7 @@
 //= jquery.js
 
 function showMenu(classMenu) {
-    $(classMenu).toggleClass("menu-show");
+    $(classMenu).toggleClass("display-flex");
 };
 
 function hideMenu(classMenu, elem) {

@@ -1,0 +1,290 @@
+//===================== SLIDER ======================= SLIDER
+
+.slider
+  height: 178px
+  width: 100%
+  background-color: $colorSilver
+  text-transform: uppercase
+  margin-top: 19px
+  &__container
+    display: flex
+    align-items: center
+    height: 100%
+    position: relative
+    padding: 10px
+  &__now
+    color: #333333
+    font-size: 14px
+    font-weight: 700
+    &:after
+      font-family: "Font Awesome 5 Free"
+      font-weight: 900
+      content: "\f105"
+    &:hover
+      color: $colorRed
+  &__left,
+  &__right
+    width: 100%
+
+.slider1
+  display: none
+  flex: 1 1 0
+  &__first-string
+    font-family: Cousine
+    color: $colorEmperor
+    font-size: 12px
+    font-weight: 700
+    margin-bottom: 7px
+  &__second-string
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.05)
+    color: $colorWhite
+    font-size: 34px
+    font-weight: 900
+    line-height: 27px
+    margin-bottom: 5px
+  &__third-string
+    font-family: "Roboto Condensed"
+    color: $colorTundora
+    font-size: 13px
+    font-weight: 700
+    line-height: 12px
+    margin-bottom: 9px
+
+.slider2
+  display: none
+  justify-content: center
+  align-items: center
+  text-align: center
+  margin: 0 auto
+  border: 1px solid rgba(255, 255, 255, 0.3)
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 25px 7px
+    color: $colorWhite
+  &__first-string
+    display: flex
+    justify-content: center
+    font-size: 34px
+    font-weight: 900
+    margin: 0 auto 13px
+  &__second-string
+    font-family: "Roboto Condensed"
+    font-size: 18px
+    font-weight: 700
+    margin-bottom: 18px
+  &__third-string
+    display: none
+    font-family: Cousine
+    color: $colorWhite
+    font-size: 12px
+    font-weight: 700
+  &__now
+    color: $colorWhite
+
+.underline
+  display: block
+  width: 16px
+  border-bottom: 3px solid $colorWhite
+
+.slider3
+  display: none
+  flex-flow: column
+  margin-left: 20px
+  &__first-string
+    font-family: "Roboto Condensed"
+    color: $colorBoulder
+    font-size: 15px
+    font-weight: 700
+    line-height: 10px
+    margin-bottom: 6px
+  &__second-string
+    color: #373737
+    font-size: 62px
+    font-weight: 900
+    line-height: 48px
+    margin-bottom: 6px
+  &__third-string
+    font-family: "Roboto Condensed"
+    color: $colorOpal
+    font-size: 21px
+    font-weight: 700
+    line-height: 14px
+    margin-bottom: 6px
+    padding: 3px
+    border-top: 2px solid $colorOpal
+    border-bottom: 2px solid $colorOpal
+  &__fourth-string
+    font-family: "Arial Black"
+    color: #373737
+    font-size: 15px
+    font-weight: 900
+    line-height: 14px
+    margin-bottom: 6px
+  &__fifth-string
+    color: $colorBoulder
+    font-size: 8px
+    font-weight: 900
+
+.control-prev,
+.control-next
+  width: 90px
+  height: 100%
+  display: none
+  position: absolute
+  top: 0px
+
+.control-prev
+  left: 0px
+
+.control-next
+  left: 100%
+  margin-left: -90px
+
+.icon_prev,
+.icon_next
+  position: absolute
+  top: 50%
+  margin-top: -24px
+  left: 50%
+  margin-left: -24px
+  width: 48px
+  height: 48px
+  border: 3px solid $colorWhite
+  border-radius: 50%
+
+.icon_prev
+  background: url("../img/angle-left-big.svg") no-repeat 45% 50%
+
+.icon_next
+  background: url("../img/angle-right-big.svg") no-repeat 55% 50%
+
+//===================== MEDIA ============================== MEDIA
+@media screen and (min-width: 768px)
+  .slider
+    height: 428px
+    &__container
+      padding: 0 90px
+
+  .slider1
+    &__first-string
+      font-size: 22px
+      margin-bottom: 16px
+    &__second-string
+      font-size: 75px
+      line-height: 60px
+      margin-bottom: 14px
+    &__third-string
+      font-size: 26px
+      line-height: 24px
+      margin-bottom: 20px
+
+  .slider2
+    &__content
+    padding: 32px 16px
+    &__first-string
+      font-size: 65px
+      margin-bottom: 26px
+    &__second-string
+      font-size: 35px
+      margin-bottom: 24px
+    &__third-string
+      display: block
+      width: 510px
+      margin-bottom: 18px
+
+  .underline
+    display: block
+    width: 30px
+    border-bottom: 4px solid $colorWhite
+
+  .slider3
+    margin-left: 20px
+    &__first-string
+      font-size: 28px
+      line-height: 20px
+      margin-bottom: 12px
+    &__second-string
+      font-size: 118px
+      line-height: 92px
+      margin-bottom: 13px
+    &__third-string
+      font-size: 39px
+      line-height: 29px
+      margin-bottom: 13px
+      padding: 4px
+      border-top: 3px solid $colorOpal
+      border-bottom: 3px solid $colorOpal
+    &__fourth-string
+      font-size: 28px
+      line-height: 26px
+      margin-bottom: 10px
+    &__fifth-string
+      font-size: 16px
+      margin-bottom: 19px
+
+  .control-prev,
+  .control-next
+    display: block
+
+@media screen and (min-width: 980px)
+  .slider
+    height: 546px
+    &__now
+      font-size: 14px
+  .slider1
+    &__first-string
+      font-size: 22px
+      margin-bottom: 16px
+    &__second-string
+      font-size: 75px
+      line-height: 60px
+      margin-bottom: 14px
+    &__third-string
+      font-size: 26px
+      line-height: 24px
+      margin-bottom: 20px
+
+  .slider2
+    &__first-string
+      font-size: 34px
+      margin: 0 auto 13px
+    &__second-string
+      font-size: 18px
+      margin-bottom: 18px
+
+  .underline
+    display: block
+    width: 16px
+    border-bottom: 3px solid $colorWhite
+
+  .slider3
+    margin-left: 20px
+    &__first-string
+      font-size: 15px
+      line-height: 10px
+      margin-bottom: 6px
+    &__second-string
+      font-size: 62px
+      line-height: 48px
+      margin-bottom: 6px
+    &__third-string
+      font-size: 21px
+      line-height: 14px
+      margin-bottom: 6px
+      padding: 3px
+      border-top: 2px solid $colorOpal
+      border-bottom: 2px solid $colorOpal
+    &__fourth-string
+      font-size: 15px
+      line-height: 14px
+      margin-bottom: 6px
+    &__fifth-string
+      font-size: 8px
+      font-weight: 900
+
+@media screen and (min-width: 1210px)
+  .slider
+    height: 1070px

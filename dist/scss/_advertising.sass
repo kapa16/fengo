@@ -1,9 +1,9 @@
 .advertising
   &__container
-
-  background-color: $colorConcrete
-  padding: 20px 0
+    background-color: $colorConcrete
+    padding: 20px
   &__block
+    position: relative
     display: flex
     flex-direction: column
     justify-content: center
@@ -13,6 +13,9 @@
     background-color: $colorSilver
     margin-bottom: 10px
     text-transform: uppercase
+    &:hover
+      .control
+        display: block
 
 .exclusive
   height: 156px
@@ -29,6 +32,14 @@
     border: 1px solid rgba(255, 255, 255, 0.3)
     margin-bottom: 11px
     padding: 0 13px
+
+  &__button-now
+    color: $colorWhite
+    font-size: 14px
+    font-weight: 700
+
+.exclusive1
+  display: none
   &__header
     width: 100% //53px
     display: flex
@@ -51,9 +62,37 @@
     color: $colorWhite
     font-size: 15px
     font-weight: 400
-  &__button-now
-    color: $colorWhite
-    font-size: 14px
+.exclusive2
+  display: none
+  color: $colorWhite
+  text-transform: uppercase
+  border: none
+  &__first-string
+    font-family: Cousine
+    font-size: 13px
+    font-weight: 400
+    letter-spacing: 2.39px
+    line-height: 11px
+    margin-bottom: 5px
+  &__second-string
+    font-family: Cousine
+    font-size: 55px
+    font-weight: 700
+    line-height: 45px
+  &__line
+    width: 38px
+    height: 2px
+    background-color: $colorWhite
+    margin: 3px auto 10px
+  &__third-string
+    font-size: 17px
+    font-weight: 400
+  &__strong
+    font-family: "Arial Black"
+    font-weight: 900
+  &__fourth-string
+    font-family: "Roboto Condensed"
+    font-size: 11px
     font-weight: 700
 
 .hottest
@@ -92,7 +131,6 @@
       justify-content: space-between
       align-content: space-between
       flex: 1 1 0
-
     &__wrap
       min-width: 476px
       height: 328px
@@ -102,7 +140,18 @@
       justify-content: space-between
       align-content: space-between
       margin-right: 20px
-
+    &__control
+      width: 70px
+    .control-next
+        margin-left: -70px
+    &__icon
+      margin-top: -19px
+      margin-left: -19px
+      width: 38px
+      height: 38px
+      &:before
+        font-size: 22px
+        line-height: 38px
 
   .exclusive,
   .hottest,
@@ -126,6 +175,11 @@
     min-width: 476px
     height: 266px
     margin-right: 20px
+    padding: 0 80px
+    &__header
+      font-size: 26px
+    &__info
+      font-size: 17px
 
   .hottest
     height: 432px

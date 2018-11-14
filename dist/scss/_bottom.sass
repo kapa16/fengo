@@ -1,0 +1,118 @@
+.bottom
+  background-color: $colorMineShaftDark
+  &__container
+    display: flex
+    flex-flow: column wrap
+    width: 100%
+    color: $colorNobel
+  &__button-now
+    color: $colorNobel
+    font-size: 12px
+  &__block
+    width: 100%
+    border: 1px dashed $colorMineShaftLight
+    padding: 40px 20px
+    &_col-1
+      border-left: none
+    &_col-3
+      border-right: none
+  &__heading
+    color: $colorNobel
+    font-family: Cousine
+    font-size: 17px
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 30px
+  &__img_about
+    float: left
+    width: 120px
+    height: 120px
+    background-color: $colorSilver
+    margin-right: 20px
+    margin-bottom: 20px
+  &__text
+    color: $colorLightGray
+    font-family: Arial
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+  &__text:after
+    content: " "
+    display: block
+    clear: both
+  //=============BLOG=============
+  &__blog-header
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__control
+    display: block
+    width: 20px
+    height: 20px
+    &:hover
+      .control__icon
+        &:before
+          color: $colorMineShaftDark
+        &_prev,
+        &_next
+          background-color: $colorDustyGray
+
+    &.control-prev
+      left: 100%
+      margin-left: -45px
+    &.control-next
+      left: 100%
+      margin-left: -20px
+
+  &__icon
+    top: 0px
+    left: 0px
+    margin: 0px
+    width: 20px
+    height: 20px
+    border: 1px solid $colorDustyGray
+    &:before
+      color: $colorDustyGray
+      font-size: 16px
+      line-height: 20px
+
+  &__img_blog
+    min-width: 280px
+    height: 205px
+    background-color: $colorSilver
+
+//===================== MEDIA ============================== MEDIA
+@media screen and (min-width: 768px)
+  .bottom
+    &__container
+      height: 1350px
+      &:before
+        content: ""
+        height: 100%
+        order: 1
+      &:after
+        content: ""
+        height: 100%
+        order: 3
+    &__block_col-1
+      width: 385 / 940 * 100%
+    &__block_col-2
+      width: 320 / 940 * 100%
+      order: 2
+    &__block_col-3
+      width: 235 / 940 * 100%
+      order: 4
+
+@media screen and (min-width: 980px)
+  .bottom
+    &__container
+      height: 1350px
+    &__block_col-1
+      width: 385 / 940 * 100%
+    &__block_col-2
+      width: 320 / 940 * 100%
+      order: 2
+    &__block_col-3
+      width: 235 / 940 * 100%
+      order: 4

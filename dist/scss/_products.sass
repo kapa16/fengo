@@ -1,0 +1,197 @@
+
+
+.products
+  &__menu
+    flex-direction: column
+    align-items: center
+    margin: 30px 0
+  &__link
+    color: $colorDustyGray
+    font-size: 16px
+    margin-bottom: 20px
+    &_active
+      color: $colorTundoraMoreDark
+      padding-bottom: 9px
+      border-bottom: 2px solid $colorTundoraMoreDark
+    &:hover
+      color: $colorTundoraMoreDark
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__card
+    position: relative
+    width: 280px
+    margin-bottom: 50px
+    &_hover
+      height: 55px
+    &:hover
+      .display_hover
+        display: flex
+      .products__rating
+        display: none
+  &__extra-info
+    position: absolute
+    z-index: 1
+    top: 10px
+    left: -3px
+    border-width: 3px
+    border-style: solid
+    font-family: Arial
+    font-weight: 700
+    font-size: 17px
+    padding: 9px 18px
+    line-height: 13px
+    text-transform: uppercase
+    &_red
+      font-family: "Arial Black"
+      font-weight: 400
+      color: $colorRed
+      border-color: $colorRed
+    &_black
+      color: $colorMortar
+      border-color: $colorMortar
+    &_gray
+      color: $colorDustyGray
+      border-color: $colorDustyGray
+  &__img
+    display: block
+    width: 100%
+    height: 364px
+    background-color: $colorSilver
+    margin-bottom: 24px
+    &_wrap
+      position: relative
+  &__info
+    display: flex
+    justify-content: space-between
+    margin-bottom: 6px
+    line-height: 20px
+
+  &__name
+    color: $colorTundoraMoreDark
+    font-size: 13px
+  &__price
+    color: $colorMineShaft
+    font-family: Cousine
+    font-size: 15px
+    font-weight: 700
+    &_old
+      color: $colorDustyGray
+      text-decoration: line-through
+  &__rating
+    color: $colorBoulder
+    &_light
+      color: $colorAltoDarker
+
+  &__buttons
+    align-items: center
+    border: 2px solid $colorTundoraMoreDark
+    margin-bottom: 8px
+  &__button
+    flex: 1 1 0
+    color: $colorTundoraMoreDark
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    line-height: 12px
+    padding: 12px 0
+  &__separator-line
+    height: 16px
+    width: 2px
+    background-color: $colorTundoraMoreDark
+  &__plus
+    justify-content: space-between
+  &__add
+    color: #333333
+    font-size: 13px
+    font-style: italic
+  &__colors
+    position: absolute
+    left: 10px
+    top: 100%
+    margin-top: -35px
+  &__color
+    width: 21px
+    height: 21px
+    border: 2px solid $colorWhite
+    outline: 1px solid $colorEmperor
+    margin-left: 10px
+    &_black
+      background: $colorWoodsmoke
+    &_blue
+      background: $colorCloudBurst
+    &_red
+      background: $colorCamelot
+
+  .show-more
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__line
+      width: 100%
+      height: 1px
+      background-color: $colorAltoDark
+    &__text
+      color: $colorEmperor
+      font-size: 14px
+      font-weight: 700
+      text-transform: uppercase
+      padding: 10px 20px
+    &:hover
+      &__text
+
+
+
+
+
+
+//===================== MEDIA ============================== MEDIA
+@media screen and (min-width: 768px)
+  .products
+    &__menu
+      flex-direction: row
+      justify-content: center
+    &__link
+      margin: 0 35px
+      padding-bottom: 9px
+      border-bottom: 2px solid transparent
+      &_active
+        border-bottom: 2px solid $colorTundoraMoreDark
+
+    &__wrap
+      flex-flow: row wrap
+      justify-content: center
+    &__card
+      width: 228px
+      margin-bottom: 10px
+      margin-right: 20px
+    &__card:nth-child(3n)
+      margin-right: 0px
+    &__img
+      height: 296px
+
+@media screen and (min-width: 980px)
+  .products
+    &__card
+      width: 300px
+    &__img
+      height: 390px
+
+@media screen and (min-width: 1210px)
+  .products
+    width: 1170px
+    margin: 0 auto
+    &__card
+      width: 270px
+      margin-bottom: 30px
+      margin-right: 30px
+    &__card:nth-child(3n)
+      margin-right: 30px
+    &__card:nth-child(4n)
+      margin-right: 0px
+    &__img
+      height: 350px

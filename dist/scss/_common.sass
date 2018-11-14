@@ -1,3 +1,37 @@
+html
+  font-family: 'Merriweather Sans', sans-serif
+
+.container
+  max-width: 1170px
+  width: 100%
+  margin: 0 auto
+  padding: 0 20px
+  box-sizing: border-box
+
+.menu
+  display: flex
+  &__link
+    text-transform: uppercase
+
+.menu_drop
+  display: none
+
+.link
+  display: flex
+
+.show
+  &_medium,
+  &_large,
+  &_favorites
+    display: none
+
+.visible_xl,
+.visible_md
+  display: none
+
+.display_hover
+  display: none
+
 .button-now
   font-size: 14px
   font-weight: 700
@@ -8,3 +42,15 @@
   &:hover
     color: $colorRed
 
+
+//===================== MEDIA ============================== MEDIA
+@media screen and (min-width: 768px)
+  .visible_md
+    display: block
+
+@media screen and (min-width: 980px)
+  .container
+
+@media screen and (min-width: 1210px)
+  .visible_xl
+    display: block
